@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import MoringaBotsArmy from "./MoringaBotArmy";
-import BotList from "./BotList";
+import YourBotArmy from "./YourBotArmy";
+import BotCollection from "./BotCollection";
 
 function Robots() {
   const [bots, setBots] = useState([]);
@@ -36,12 +36,12 @@ function Robots() {
 
   return (
     <div>
-      <MoringaBotsArmy
+      <YourBotArmy
         yourBots={yourBots}
         addBotToArmy={removeFromYourBots}
         handleDelete={handleDelete}
       />
-      <BotList
+      <BotCollection
         bots={bots}
         addBotToArmy={addBotToArmy}
         handleDelete={handleDelete}
