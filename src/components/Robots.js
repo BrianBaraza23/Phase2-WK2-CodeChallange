@@ -7,7 +7,7 @@ function Robots() {
   const [yourBots, setYourBots] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/bots")
+    fetch("https://bot-battlr-data-base.onrender.com/bots")
       .then((response) => response.json())
       .then((data) => setBots(data))
       .catch((error) => console.log(error));
@@ -24,7 +24,7 @@ function Robots() {
   }
 
   function handleDelete(bot) {
-    fetch(`http://localhost:4000/bots/${bot.id}`, {
+    fetch(`https://bot-battlr-data-base.onrender.com/bots/${bot.id}`, {
       method: 'DELETE',
     })
     .then(res => res.json())
